@@ -1,0 +1,26 @@
+<section id="main_first" class="main_first">
+    <div class="main_first__in center_block">
+        <div class="main_first__l-side">
+            <div class="main_first__title">Первый заем бесплатно</div>
+            <ul class="main_first__list">
+                <li>
+                    <div class="main_first__list--icon">
+                        <img src="./img/l_icon1.svg" alt="">
+                    </div>
+                    <div class="main_first__list--txt">Лидер среди МФО по онлайн-заявкам в России</div>
+                </li>
+                <li>
+                    <div class="main_first__list--icon">
+                        <img src="./img/l_icon2.svg" alt="">
+                    </div>
+                    <div class="main_first__list--txt">Деньги у вас в 14:08</div>
+                </li>
+            </ul>
+        </div>
+        <div class="main_first__r-side">
+            <img class="main_first__r-side--img" v-if="sizes.window >= 1023" src="./img/card2.png" alt="">
+            <img class="main_first__r-side--img2" v-if="sizes.window >= 1023" src="./img/card1.png" alt="">
+            <img src="./img/card3.png" v-if="sizes.window <= 1023" alt="">
+        </div>
+    </div>
+</section>

@@ -1,0 +1,242 @@
+.main_reviews {
+    background: #EEF1F5;
+    padding-top: vw(96);
+    padding-bottom: vw(112);
+    margin-bottom: vw(-24);
+    @media all and (max-width: 1023px) {
+        padding-top: 56px;
+        margin-bottom: -16px;
+        padding-bottom: 72px;
+    }
+    &__title {
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(48);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: vw(29);
+        @media all and (max-width: 1023px) {
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+    }
+    &__slider {
+        position: relative;
+    }
+    .slick-list {
+        margin-left: vw(-8);
+        margin-right: vw(-8);
+    }
+    .slick-slide {
+        margin-left: vw(8);
+        margin-right: vw(8);
+    }
+    &__block {
+        border-radius: 16px;
+        padding: vw(16);
+        background: #FFF;
+        @media all and (max-width: 1023px) {
+            padding: 16px;
+        }
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: vw(16);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 16px;
+        }
+    }
+    &__img {
+        margin-right: vw(16);
+        width: vw(48);
+        height: vw(48);
+        flex: 0 0 vw(48);
+        border-radius: 50%;
+        @media all and (max-width: 1023px) {
+            flex: 0 0 48px;
+            width: 48px;
+            height: 48px;
+            margin-right: 16px;
+        }
+    }
+    &__txt {
+        width: 100%;
+    }
+    &__name {
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(18);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        margin-bottom: vw(4);
+        @media all and (max-width: 1023px) {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+    }
+    &__txt {
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+        }
+    }
+    &__from {
+        color: var(--Darck-grey, #666);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+        }
+    }
+    &__stars {
+        margin-bottom: vw(16);
+        width: vw(136);
+        height: vw(24);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 16px;
+            width: 136px;
+            height: 24px;
+        }
+        svg {
+            width: 100%;
+        }
+    }
+    &__texts {
+        padding-top: vw(16);
+        color: var(--Darck-grey, #666);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(16);
+        font-style: normal;
+        border-top: 1px solid var(--light-grey-line, #E1E1E1);
+        font-weight: 400;
+        line-height: 140%;
+        @media all and (max-width: 1023px) {
+            padding-top: 16px;
+            font-size: 16px;
+        }
+    }
+    .slick-prev, .slick-next {
+        font-size: 0;
+        position: absolute;
+        top: vw(-85);
+        width: vw(64);
+        height: vw(64);
+        border-radius: 50%;
+        border: 0;
+        cursor: pointer;
+        background-color: #fff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M26.6667 16L5.33342 16M5.33342 16L13.3334 24M5.33342 16L13.3334 8' stroke='%23313132' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: vw(32);
+        @media all and (max-width: 1023px) {
+            top: unset;
+            bottom: -80px;
+            border-radius: 10px;
+            background-size: 13px;
+            width: 56px;
+            height: 56px;
+        }
+        &:hover {
+            background-color: #FF692B;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M26.6667 16L5.33342 16M5.33342 16L13.3334 24M5.33342 16L13.3334 8' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        }
+    }
+    .slick-prev {
+        right: vw(88);
+    }
+    .slick-next {
+        right: 0;
+        transform: rotate(180deg);
+        @media all and (max-width: 1023px) {
+            right: 0;
+            left: unset;
+        }
+    }
+    &__more {
+        margin-top: vw(32);
+        padding: vw(19) vw(24);
+        border-radius: 5px;
+        background: var(--Orange, #FF692B);
+        color: var(--white, #FFF);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border: 0;
+        max-width: vw(340);
+        cursor: pointer;
+        width: 100%;
+        &:hover {
+            background: #fff;
+            color: #FF692B;
+        }
+        &:active {
+            background: #D74103;
+            color: #fff;
+        }
+        @media all and (max-width: 1023px) {
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 340px;
+            padding: 19px 24px;
+            font-size: 16px;
+        }
+    }
+    .slick-dots {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        bottom: vw(-76);
+        position: absolute;
+        right: 0;
+        @media all and (max-width: 1023px) {
+            bottom: -26px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            left: 0;
+        }
+        li {
+            padding: 0;
+            margin: 0;
+            button {
+                padding: 0;
+                margin-left: vw(8);
+                margin-right: vw(8);
+                width: vw(10);
+                height: vw(10);
+                border-radius: 50%;
+                cursor: pointer;
+                border: 1px solid #666;
+                font-size: 0;
+                @media all and (max-width: 1023px) {
+                    margin-left: 8px;
+                    margin-right: 8px;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+            &.slick-active {
+                button {
+                    background: #FF692B;
+                    border-color: #FF692B;
+                }
+            }
+        }
+    }
+}

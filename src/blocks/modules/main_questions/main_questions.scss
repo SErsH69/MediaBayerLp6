@@ -1,0 +1,164 @@
+.main_questions {
+    border-radius: vw(24) vw(24) 0px 0px;
+    background: #E9E9F7;
+    @media all and (max-width: 1023px) {
+        border-radius: 16px 16px 0px 0px;
+    }
+    &__in {
+        position: relative;
+        padding-top: vw(48);
+        padding-bottom: vw(48);
+        @media all and (max-width: 1023px) {
+            padding-top: 32px;
+            padding-bottom: 16px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-image: url(../img/rub1.png), url(../img/rub2.png), url(../img/rub3.png);
+            width: vw(579);
+            height: vw(290);
+            background-position: 80% 100%, 0% 61%, 52% 0%;
+            background-size: vw(150), vw(120), vw(78);
+            background-repeat: no-repeat;
+            @media all and (max-width: 1023px) {
+                display: none;
+            }
+        }
+    }
+    &__title {
+        position: relative;
+        z-index: 2;
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(48);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        margin-bottom: vw(32);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 32px;
+            font-size: 32px;
+        }
+    }
+    &__items {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+        }
+    }
+    &__l-side {
+        width: calc(50% - vw(8));
+        @media all and (max-width: 1023px) {
+            padding-top: 0;
+            width: 100%;
+        }
+    }
+    &__block {
+        padding: vw(24);
+        border-radius: 12px;
+        background: var(--white, #FFF);
+        cursor: pointer;
+        box-shadow: 0px 87px 24px 0px rgba(0, 0, 0, 0.00), 0px 56px 22px 0px rgba(0, 0, 0, 0.00), 0px 31px 19px 0px rgba(0, 0, 0, 0.01), 0px 14px 14px 0px rgba(0, 0, 0, 0.02), 0px 3px 8px 0px rgba(0, 0, 0, 0.02);
+        &:not(:last-child) {
+            margin-bottom: vw(16);
+            @media all and (max-width: 1023px) {
+                margin-bottom: 16px;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        &.isActive {
+            &:before {
+                transform: rotate(180deg);
+            }
+            .main_questions__answer {
+                display: block;
+            }
+            .main_questions__question {
+                color: #FF692B;
+                &:before {
+                    transform: rotate(180deg);
+                    background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.5999 7.45837L11.1666 12.8917C10.5249 13.5334 9.4749 13.5334 8.83324 12.8917L3.3999 7.45837' stroke='%23FF692B' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+                }
+            }
+        }
+    }
+    &__question {
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(20);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        position: relative;
+        padding-right: vw(24);
+        @media all and (max-width: 1023px) {
+            font-size: 18px;
+            padding-right: 25px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: vw(20);
+            height: vw(20);
+            margin-top: vw(-10);
+            background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.5999 7.45837L11.1666 12.8917C10.5249 13.5334 9.4749 13.5334 8.83324 12.8917L3.3999 7.45837' stroke='%23313132' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+            @media all and (max-width: 1023px) {
+                width: 24px;
+                height: 24px;
+                margin-top: -12px;
+            }
+        }
+    }
+    &__answer {
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        padding-top: vw(24);
+        margin-top: vw(20);
+        border-top: 1px solid #EFEFEF;
+        display: none;
+        * {
+            font-family: 'Gilroy', sans-serif, cursive;
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            @media all and (max-width: 1023px) {
+                font-size: 16px;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            padding-top: 24px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__r-side {
+        width: calc(50% - vw(8));
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+}
